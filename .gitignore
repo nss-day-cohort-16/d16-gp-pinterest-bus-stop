@@ -1,2 +1,5 @@
 .DS_Store
 lib/node_modules
+lib/bower_components
+lib/.sass-cache
+Value/fb-creds
