@@ -40,4 +40,4 @@ app.factory("AuthFactory", function(){
 	};
 
 	return{createUser, loginUser, logoutUser, isAuthenticated};
-});
+

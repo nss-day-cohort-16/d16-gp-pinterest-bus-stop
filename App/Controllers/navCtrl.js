@@ -12,3 +12,4 @@ app.controller('NavCtrl', function($scope){
    		url: '#/logout'
    	}]; 
 });
+
