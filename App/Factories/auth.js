@@ -1,54 +1,43 @@
 "use strict";
 
+app.factory("AuthFactory", function(){
+	let currentUser = null;
 
-app.auth("authFactory", function () {
-	let currentUser= null;
+	// Must Create A User Before We can Use one
 
-let createUser = function () {
+	let createUser = function (user){
+		let provider = new firebase.auth.GoogleAuthProvider(),
+		currentUser = null;
 
-	return firebase.auth().createUserWithEmailandPassword(userObj.)
-}
-
-
-let logIn = function () {
-
-	return firebase.auth().signInWithEmailAndPassword(email, pass);
-}
-
-
-let logOut = function () {
-
-
-	return firebase.auth();
-	signOut();
-}
-
-let isAuthenticated = function (){
-
-	return new Promise ((resolve, reject) => {
-		firebase.auth().onAuthStateChanged((user) => {
-			if (user ) {
-				currentUser = user.uid;
-				resolve (true);
-			} else {
-				resolve (false);
-			}
-		});
-	});
-};
-
-
-let getCurrentUser = function () { 
-
-	return currentUser;
-};
-
-return {
-	createUser,
-	logIn,
-	logOut,
-	isAuthenticated,
-	getCurrentUser
-};
-
+		//listen for log in or log out actions and set currentUser's value
+	firebase.auth().onAuthStateChanged(function(user){
+		if (user) {
+			currentUser = user.uid;
+			console.log("currentUser Logged in?", 	currentUser);
+		} else {
+			currentUser = null;
+			console.log("currentUser Logged out?", currentUser);
+		}
 });
+
+	};
+
+	let loginUser =function(user){
+		//
+	};
+
+	let logoutUser = function(user){
+
+	};
+
+	let isAuthenticated = function(user){
+
+	};
+
+	let getUser = function(user){
+
+	};
+
+	return {createUser, loginUser, logoutUser, isAuthenticated, getUser}
+})
+
