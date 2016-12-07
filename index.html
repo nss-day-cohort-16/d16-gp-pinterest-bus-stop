@@ -9,7 +9,9 @@
     <script type="text/javascript" src="lib/bower_components/angular-route/angular-route.min.js"></script>
 </head>
 
-<body>
+<body ng-app="UserNotesApp">
+
+<div ng-include="'partials/navbar.html'"></div>
 
 
 
@@ -18,33 +20,20 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- jquery and bootstrap -->
-    <script type="text/javascript" src="lib/bower_components/jquery/dist/jquery.min.js"></script>
-    <script type="text/javascript" src="lib/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-    <!-- app & factories -->
-    <script type="text/javascript" src="App/Value/app.js"></script>
-    <script type="text/javascript" src="App/Factories/auth.js"></script>
-    <script type="text/javascript" src="App/Factories/itemFactories.js"></script>
-    <!--runs first -->
-    <!-- controllers -->
-    <script type="text/javascript" src="App/Controllers/createBoardsCtrl.js"></script>
-    <script type="text/javascript" src="App/Controllers/createPinViewCtrl.js"></script>
-    <script type="text/javascript" src="App/Controllers/loginCtrl.js"></script>
-    <script type="text/javascript" src="App/Controllers/navCtrl.js"></script>
-    <script type="text/javascript" src="App/Controllers/viewBoardsCtrl.js"></script>
+		<!-- jquery and bootstrap -->
+		<script type="text/javascript" src="lib/bower_components/jquery/dist/jquery.min.js"></script>
+		<script type="text/javascript" src="lib/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+		<!-- app & factories -->
+		<script type="text/javascript" src="App/Value/app.js"></script>
+		<script type="text/javascript" src="App/Factories/auth.js"></script>
+		<script type="text/javascript" src="App/Factories/itemFactories.js"></script>
+		<!--runs first -->
+		<!-- controllers -->
+		<script type="text/javascript" src="App/Controllers/createBoardsCtrl.js"></script>
+		<script type="text/javascript" src="App/Controllers/createPinViewCtrl.js"></script>
+		<script type="text/javascript" src="App/Controllers/loginCtrl.js"></script>
+		<script type="text/javascript" src="App/Controllers/navCtrl.js"></script>
+		<script type="text/javascript" src="App/Controllers/viewBoardsCtrl.js"></script>
 </body>
 
 </html>

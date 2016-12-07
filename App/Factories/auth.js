@@ -1,54 +1,44 @@
 "use strict";
 
+app.factory("AuthFactory", function(){
 
-app.auth("authFactory", function () {
-	let currentUser= null;
+	//Set the current user to null. The user will be null until authenticated.
+	//userObj from loginCtrl.js
+	
+	let currentUser = null;
 
-let createUser = function () {
+	let createUser = function(userObj){
+		console.log(userObj);
+		return firebase.auth().createUserWithEmailAndPassword(userObj.email, userObj.password);
+	};
 
-	return firebase.auth().createUserWithEmailandPassword(userObj.)
-}
+	let loginUser = function(userObj){
+		return firebase.auth().signInWithEmailAndPassword(userObj.email, userObj.password);
+	};
 
+	let logoutUser = function(){
+		return firebase.auth().signOut();
+	};
 
-let logIn = function () {
-
-	return firebase.auth().signInWithEmailAndPassword(email, pass);
-}
-
-
-let logOut = function () {
-
-
-	return firebase.auth();
-	signOut();
-}
-
-let isAuthenticated = function (){
-
-	return new Promise ((resolve, reject) => {
-		firebase.auth().onAuthStateChanged((user) => {
-			if (user ) {
-				currentUser = user.uid;
-				resolve (true);
-			} else {
-				resolve (false);
-			}
+	// A Promise wrapped around a listener. 
+	let isAuthenticated = function(){
+		return new Promise ((resolve, reject) => {
+			firebase.auth().onAuthStateChanged((user) => {
+				if (user) {
+					currentUser = user.uid;
+					console.log("currentUser", currentUser);
+					resolve(true);
+				} else {
+					resolve(false);
+				}
+			});
 		});
-	});
-};
+	};
 
+	let getUser = function(){
+		return currentUser;
+	};
 
-let getCurrentUser = function () { 
-
-	return currentUser;
-};
-
-return {
-	createUser,
-	logIn,
-	logOut,
-	isAuthenticated,
-	getCurrentUser
-};
+	return{createUser, loginUser, logoutUser, isAuthenticated};
 
 });
