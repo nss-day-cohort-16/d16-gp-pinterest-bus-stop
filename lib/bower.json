@@ -1,0 +1,18 @@
+{
+  "name": "lib",
+  "description": "",
+  "main": "Gruntfile.js",
+  "authors": [
+    "Shawn M <forgeforza@outlook.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/nss-day-cohort-16/d16-gp-pinterest-bus-stop",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
