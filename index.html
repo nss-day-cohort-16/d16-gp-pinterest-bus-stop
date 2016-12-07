@@ -6,18 +6,28 @@
     <script type="text/javascript" src="lib/bower_components/firebase/firebase.js"></script>
     <script type="text/javascript" src="lib/bower_components/angular-route/angular-route.min.js"></script>
 </head>
-<body>
+
+<body ng-app="PinterestApp">
+
+  <!--ng include to add partials single quote within double quote -->
+  <div ng-include="'partials/navView.html'"></div>
+
+  <!--show the things! -->
+  <div ng-view></div>
 
 
-
-
-
+ 
 <!-- jquery and bootstrap -->
 <script type="text/javascript" src="lib/bower_components/jquery/dist/jquery.min.js"></script>
-<script type="text/javascript" src="lib/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
 <!-- app & factories -->
 <script type="text/javascript" src="App/app.js"></script> <!--runs first -->
+<script type="text/javascript" src="App/Value/fb-creds.js"></script>
+<script type="text/javascript" src="App/Factories/authFactory.js"></script>
+
+<!-- controllers -->
+<script type="text/javascript" src="App/Controllers/loginCtrl.js"></script>
+<script type="text/javascript" src="App/Controllers/navCtrl.js"></script>
 
 <!-- controllers -->
 
