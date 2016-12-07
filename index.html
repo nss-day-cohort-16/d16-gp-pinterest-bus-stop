@@ -5,13 +5,13 @@
     <title>Centrist</title>
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <script type="text/javascript" src="lib/bower_components/angular/angular.min.js"></script>
-    <script type="text/javascript" src="lib/bower_components/firebase/firebase.js"></script>
     <script type="text/javascript" src="lib/bower_components/angular-route/angular-route.min.js"></script>
+    <script type="text/javascript" src="lib/bower_components/firebase/firebase.js"></script>
 </head>
 
-<body ng-app="UserNotesApp">
+<body ng-app="Centrist">
 
-<div ng-include="'partials/navbar.html'"></div>
+<div ng-include="'partials/navView.html'"></div>
 
 
 
@@ -24,16 +24,13 @@
 		<script type="text/javascript" src="lib/bower_components/jquery/dist/jquery.min.js"></script>
 		<script type="text/javascript" src="lib/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 		<!-- app & factories -->
-		<script type="text/javascript" src="App/Value/app.js"></script>
+		<script type="text/javascript" src="App/app.js"></script>
 		<script type="text/javascript" src="App/Factories/auth.js"></script>
-		<script type="text/javascript" src="App/Factories/itemFactories.js"></script>
-		<!--runs first -->
+		<script type="text/javascript" src="App/Value/fb-creds.js"></script>
+
 		<!-- controllers -->
-		<script type="text/javascript" src="App/Controllers/createBoardsCtrl.js"></script>
-		<script type="text/javascript" src="App/Controllers/createPinViewCtrl.js"></script>
 		<script type="text/javascript" src="App/Controllers/loginCtrl.js"></script>
 		<script type="text/javascript" src="App/Controllers/navCtrl.js"></script>
-		<script type="text/javascript" src="App/Controllers/viewBoardsCtrl.js"></script>
 </body>
 
 </html>
