@@ -26,5 +26,4 @@ app.controller("LoginCtrl", function($scope, AuthFactory, $window) {
 				
 			});
 	};
-
 });
