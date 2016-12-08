@@ -39,6 +39,6 @@ app.factory("AuthFactory", function(){
 		return currentUser;
 	};
 
-	return{createUser, loginUser, logoutUser, isAuthenticated};
+	return{createUser, loginUser, logoutUser, isAuthenticated, getUser};
 
 });

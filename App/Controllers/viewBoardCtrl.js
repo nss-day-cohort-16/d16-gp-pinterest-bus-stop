@@ -1,6 +1,6 @@
 "use strict";
 
-app.controller('createBoardCtrl', function($scope, boardStorage, SearchTermData){
+app.controller('viewBoardCtrl', function($scope, boardStorage, SearchTermData){
 	$scope.searchText = SearchTermData;
 	boardStorage.getBoardList()
 	.then((itemArray) => {
